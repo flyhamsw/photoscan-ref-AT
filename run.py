@@ -26,7 +26,7 @@ def reference_image_AT(query_fname, query_x, query_y, query_z, distance_thr, que
             f.write('%s,%s,%s,%s,%s' % (reference_image_data[0], reference_image_data[1], reference_image_data[2], reference_image_data[3], reference_image_data[4]))
         f.write('%s,%s,%s,%s,%s' % (query_fname, query_accuracy, query_x, query_y, query_z))
 
-    ip = Innophotoscan()
+    ip = Innophotoscan(5186)
     EO = ip.photoscan_alignphotos(selected_fname_list)
 
 

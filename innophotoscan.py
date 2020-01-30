@@ -5,7 +5,7 @@ import time
 
 class Innophotoscan:
 
-    def __init__(self. epsg):
+    def __init__(self, epsg):
         print("InnoPAM")
         self.my_crs = PhotoScan.CoordinateSystem('EPSG::%s' % epsg)
 
