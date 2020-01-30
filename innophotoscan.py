@@ -7,7 +7,7 @@ class Innophotoscan:
 
     def __init__(self, epsg):
         print("InnoPAM")
-        self.my_crs = PhotoScan.CoordinateSystem('EPSG::%s' % epsg)
+        self.my_crs = PhotoScan.CoordinateSystem('EPSG::%s' % str(epsg))
 
     def photoscan_alignphotos(self, ImgList):
         start_time = time.time()
@@ -20,7 +20,7 @@ class Innophotoscan:
 
         # Retrieve georeferencing data of reference images
         doc.chunk.loadReference(
-            'data/reference_query_merged.txt',
+            'reference_query_merged.txt',
             PhotoScan.ReferenceFormatCSV,
             'n[XYZ]xyz',
             ','
